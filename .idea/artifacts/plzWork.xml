@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="plzWork">
+    <output-path>$PROJECT_DIR$/out/artifacts/plzWork</output-path>
+    <root id="archive" name="plzWork.war" />
+  </artifact>
+</component>
