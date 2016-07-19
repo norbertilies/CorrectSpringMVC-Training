@@ -1,11 +1,27 @@
 package co.uk.endava.model;
 
+import javax.persistence.*;
+
+
 /**
  * Created by nilies on 7/14/2016.
  */
+@Entity
+@Table(name = "usr")
 public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    private String id;
+
+    @Column(name = "username", length = 50, nullable = false)
     private String username;
+
+    @Column(name = "password", length = 50, nullable = false)
     private String password;
+
+    @Column(name = "age", length = 3)
     private Integer age;
 
     public User(){
@@ -43,5 +59,9 @@ public class User {
         this.password=password;
         this.age=age;
     }
+
+    public String getId() { return this.id; }
+
+    public void setId(String id){ this.id = id; }
 
 }
